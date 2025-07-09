@@ -2,13 +2,6 @@ name: "\U0001F680 Feature request"
 description: Submit a request for a new feature
 labels: ["enhancement", "pending"]
 body:
-  - type: markdown
-    attributes:
-      value: |        
-        Thank you for taking the time to suggest a new feature for MemOS! To help us understand and evaluate your proposal, please provide detailed information below.
-        
-        感谢您为 MemOS 提出新功能建议！为了帮助我们理解和评估您的提案，请在下方提供详细信息。
-
   - type: checkboxes
     id: checklist
     attributes:
@@ -34,32 +27,14 @@ body:
         Describe the problem you're trying to solve...
         Example: "As a developer using MemOS, I find it difficult to..."
 
-  - type: textarea
-    id: proposed_solution
-    validations:
-      required: false
-    attributes:
-      label: Proposed Solution
-      description: |
-        Describe your proposed solution in detail. How would this feature work? | 描述您提议的解决方案。这个功能将如何工作？
-      placeholder: |
-        Describe your proposed solution...
-        Include:
-        - How it would work
-        - What the API/interface might look like
-        - Any technical considerations
-
-  - type: textarea
+  - type: checkboxes
     id: contribution
-    validations:
-      required: false
     attributes:
       label: Implementation Contribution
       description: |
         Are you willing to contribute to the implementation of this feature? | 您是否愿意为此功能的实现做出贡献？
-      placeholder: |
-        - [ ] I'm willing to implement this feature myself
-        - [ ] I can help with testing
-        - [ ] I can help with documentation
-        - [ ] I can provide guidance/requirements but cannot implement
-        - [ ] I would like someone else to implement this
+      options:
+        - label: I'm willing to implement this feature myself | 我愿意自己实现此功能
+          required: false
+        - label: I would like someone else to implement this | 我希望其他人来实现此功能
+          required: false
