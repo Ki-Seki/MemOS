@@ -4,22 +4,10 @@ labels: ["enhancement", "pending"]
 body:
   - type: markdown
     attributes:
-      value: |
-        ## 📋 Before submitting this feature request
-        
+      value: |        
         Thank you for taking the time to suggest a new feature for MemOS! To help us understand and evaluate your proposal, please provide detailed information below.
         
         感谢您为 MemOS 提出新功能建议！为了帮助我们理解和评估您的提案，请在下方提供详细信息。
-        
-        **Please ensure:**
-        - This is a feature request, not a bug report (use the bug report template for bugs)
-        - You have searched existing issues to avoid duplicates
-        - The feature aligns with MemOS's goals and scope
-        
-        **请确保:**
-        - 这是功能请求，不是错误报告（错误请使用错误报告模板）
-        - 您已搜索现有问题以避免重复
-        - 该功能与 MemOS 的目标和范围一致
 
   - type: checkboxes
     id: checklist
@@ -27,11 +15,11 @@ body:
       label: Pre-submission checklist
       description: Please confirm you have completed these steps
       options:
-        - label: I have searched existing issues and this feature hasn't been requested before
+        - label: I have searched existing issues and this feature hasn't been requested before | 我已搜索现有问题，确认此功能尚未被请求
           required: true
-        - label: I have read the project documentation and confirmed this feature doesn't already exist
+        - label: I have read the project documentation and confirmed this feature doesn't already exist | 我已阅读项目文档并确认此功能尚未存在
           required: true
-        - label: This feature request is specific to MemOS and not a general software issue
+        - label: This feature request is specific to MemOS and not a general software issue | 该功能请求是针对 MemOS 的，而不是一般软件问题
           required: true
 
   - type: textarea
@@ -41,8 +29,7 @@ body:
     attributes:
       label: Problem Statement
       description: |
-        What problem does this feature solve? What pain point are you experiencing?
-        该功能解决什么问题？您遇到了什么痛点？
+        What problem does this feature solve? What pain point are you experiencing? | 该功能解决什么问题？您遇到了什么痛点？
       placeholder: |
         Describe the problem you're trying to solve...
         Example: "As a developer using MemOS, I find it difficult to..."
@@ -50,12 +37,11 @@ body:
   - type: textarea
     id: proposed_solution
     validations:
-      required: true
+      required: false
     attributes:
       label: Proposed Solution
       description: |
-        Describe your proposed solution in detail. How would this feature work?
-        详细描述您提议的解决方案。这个功能将如何工作？
+        Describe your proposed solution in detail. How would this feature work? | 描述您提议的解决方案。这个功能将如何工作？
       placeholder: |
         Describe your proposed solution...
         Include:
@@ -64,72 +50,13 @@ body:
         - Any technical considerations
 
   - type: textarea
-    id: use_cases
-    validations:
-      required: true
-    attributes:
-      label: Use Cases
-      description: |
-        Provide specific use cases and examples of how this feature would be used.
-        提供具体的用例和该功能如何使用的示例。
-      placeholder: |
-        Example use cases:
-        1. Use case 1: When I..., I want to..., so that...
-        2. Use case 2: As a..., I need to..., because...
-
-  - type: textarea
-    id: alternatives
-    validations:
-      required: false
-    attributes:
-      label: Alternatives Considered
-      description: |
-        What alternative solutions or workarounds have you considered?
-        您考虑过哪些替代解决方案或变通方法？
-      placeholder: |
-        Describe any alternative approaches you've considered:
-        - Alternative approach 1: ...
-        - Current workaround: ...
-        - Why these alternatives are not sufficient: ...
-
-  - type: dropdown
-    id: priority
-    attributes:
-      label: Priority Level
-      description: How important is this feature to you?
-      options:
-        - Low - Nice to have
-        - Medium - Would significantly improve my workflow
-        - High - Critical for my use case
-        - Critical - Blocking my adoption of MemOS
-    validations:
-      required: true
-
-  - type: textarea
-    id: additional_context
-    validations:
-      required: false
-    attributes:
-      label: Additional Context
-      description: |
-        Add any other context, screenshots, mockups, or examples about the feature request.
-        添加关于功能请求的任何其他上下文、截图、模型或示例。
-      placeholder: |
-        Additional information:
-        - Related issues or discussions
-        - Screenshots or mockups
-        - External references
-        - Performance considerations
-
-  - type: textarea
     id: contribution
     validations:
       required: false
     attributes:
       label: Implementation Contribution
       description: |
-        Are you willing to contribute to the implementation of this feature?
-        您是否愿意为此功能的实现做出贡献？
+        Are you willing to contribute to the implementation of this feature? | 您是否愿意为此功能的实现做出贡献？
       placeholder: |
         - [ ] I'm willing to implement this feature myself
         - [ ] I can help with testing
