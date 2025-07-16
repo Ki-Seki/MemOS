@@ -71,3 +71,13 @@ body:
       required: false
     attributes:
       label: "Additional Context | 其他信息"
+
+  - type: checkboxes
+    id: contribution
+    attributes:
+      label: Implementation Contribution
+      options:
+        - label: I'm willing to implement this myself | 我愿意自己解决
+          required: false
+        - label: I would like someone else to implement this | 我希望其他人来解决
+          required: false
