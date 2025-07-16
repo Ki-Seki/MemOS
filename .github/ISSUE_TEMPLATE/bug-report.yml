@@ -39,7 +39,7 @@ body:
     id: environment
     attributes:
       label: "Environment | 环境信息"
-      value: |
+      placeholder: |
         - Python version: 
         - Operating System: 
         - MemOS version: (run `pip show memoryos`)
