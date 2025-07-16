@@ -1,5 +1,17 @@
 blank_issues_enabled: false
 contact_links:
-  - name: GitHub Community Support
+  - name: GitHub Issues
+    url: https://github.com/MemTensor/MemOS/issues
+    about: Report bugs or request features in our GitHub Issues.
+  - name: GitHub Pull Requests
+    url: https://github.com/MemTensor/MemOS/pulls
+    about: Contribute code improvements via Pull Requests.
+  - name: GitHub Discussions
     url: https://github.com/MemTensor/MemOS/discussions
-    about: Please ask and answer questions here.
+    about: Participate in our GitHub Discussions to ask questions or share ideas.
+  - name: Discord Server
+    url: https://discord.gg/Txbx3gebZR
+    about: Join our Discord Server for real-time community chat.
+  - name: WeChat Group
+    url: https://statics.memtensor.com.cn/memos/qr-code.png
+    about: Scan the QR code to join our WeChat group.
