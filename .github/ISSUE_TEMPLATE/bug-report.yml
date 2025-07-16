@@ -1,38 +1,150 @@
-name: "\U0001F41B Bug / help"
-description: Create a report to help us improve MemOS
+name: "\U0001F41B Bug Report"
+description: Create a detailed bug report to help us improve MemOS
+title: "[Bug]: "
 labels: ["bug", "pending"]
 body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for taking the time to fill out this bug report! Please provide as much detail as possible to help us diagnose and fix the issue.
+        
+        感谢您花时间填写此错误报告！请提供尽可能多的详细信息以帮助我们诊断和修复问题。
+
+  - type: textarea
+    id: bug-description
+    attributes:
+      label: "Bug Description"
+      description: "A clear and concise description of what the bug is."
+      placeholder: "Describe the bug..."
+    validations:
+      required: true
+
+  - type: textarea
+    id: expected-behavior
+    attributes:
+      label: "Expected Behavior"
+      description: "A clear and concise description of what you expected to happen."
+      placeholder: "What should have happened?"
+    validations:
+      required: true
+
+  - type: textarea
+    id: actual-behavior
+    attributes:
+      label: "Actual Behavior"
+      description: "A clear and concise description of what actually happened."
+      placeholder: "What actually happened?"
+    validations:
+      required: true
+
+  - type: textarea
+    id: reproduction-steps
+    attributes:
+      label: "Steps to Reproduce"
+      description: |
+        Please provide step-by-step instructions to reproduce the issue.
+        请提供重现问题的详细步骤。
+      placeholder: |
+        1. Go to '...'
+        2. Click on '....'
+        3. Scroll down to '....'
+        4. See error
+      value: |
+        1. 
+        2. 
+        3. 
+    validations:
+      required: true
+
+  - type: textarea
+    id: code-sample
+    attributes:
+      label: "Code Sample"
+      description: "If applicable, provide a minimal code sample that reproduces the issue."
+      render: python
+      placeholder: |
+        # Paste your code here
+        import memos
+        # ... rest of your code
+
+  - type: textarea
+    id: error-logs
+    attributes:
+      label: "Error Messages and Stack Traces"
+      description: |
+        Please provide any error messages, stack traces, or relevant log output.
+        请提供任何错误消息、堆栈跟踪或相关日志输出。
+      render: text
+      placeholder: "Paste error messages and stack traces here..."
 
   - type: textarea
     id: system-info
+    attributes:
+      label: "System Information"
+      description: |
+        Please share your system info. You can run **`pip show memos`** and copy-paste its output below.
+        Also include your Python version, operating system, and any other relevant environment details.
+        
+        请提供您的系统信息。您可以运行 **`pip show memos`** 并将输出复制到下方。
+        同时请包含您的 Python 版本、操作系统和其他相关环境详细信息。
+      placeholder: |
+        - MemOS version: 
+        - Python version: 
+        - Operating System: 
+        - pip show memos output:
     validations:
       required: true
+
+  - type: dropdown
+    id: severity
     attributes:
-      label: System Info
-      description: |
-        Please share your system info with us. You can run the command **pip show MemoryOS** and copy-paste its output below.
-        请提供您的系统信息。您可以在命令行运行 **pip show MemoryOS** 并将其输出复制到该文本框中。
-
-      placeholder: MemoryOS version, platform, python version, ...
-
-  - type: textarea
-    id: reproduction
+      label: "Severity"
+      description: "How severe is this bug?"
+      options:
+        - Critical (System crashes, data loss)
+        - High (Major functionality broken)
+        - Medium (Feature partially broken)
+        - Low (Minor issue, workaround available)
     validations:
       required: true
-    attributes:
-      label: Reproduction
-      description: |
-        Please provide entry arguments, error messages and stack traces that reproduces the problem.
-        请提供入口参数，错误日志以及异常堆栈以便于我们复现问题。
 
-      value: |
-        ```text
-        Put your message here.
-        ```
+  - type: checkboxes
+    id: environment
+    attributes:
+      label: "Environment"
+      description: "Which environments does this affect? (Check all that apply)"
+      options:
+        - label: "Development"
+        - label: "Testing"
+        - label: "Production"
+        - label: "Docker/Container"
+        - label: "Local installation"
 
   - type: textarea
-    id: others
-    validations:
-      required: false
+    id: workaround
     attributes:
-      label: Others
+      label: "Workaround"
+      description: "If you found a workaround for this issue, please describe it here."
+      placeholder: "Describe any workaround you've found..."
+
+  - type: textarea
+    id: additional-context
+    attributes:
+      label: "Additional Context"
+      description: |
+        Add any other context about the problem here. Include screenshots, configuration files, or any other relevant information.
+        在此处添加有关问题的任何其他上下文。包括屏幕截图、配置文件或任何其他相关信息。
+      placeholder: "Any additional information that might help..."
+
+  - type: checkboxes
+    id: terms
+    attributes:
+      label: "Checklist"
+      description: "Please confirm the following:"
+      options:
+        - label: "I have searched for existing issues and this is not a duplicate"
+          required: true
+        - label: "I have provided sufficient information to reproduce the issue"
+          required: true
+        - label: "I am using the latest version of MemOS"
+          required: false
